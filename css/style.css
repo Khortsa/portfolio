@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:'indie flower', sans-serif;
+}
+
+/* Navigation menu css */
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 998;
+    font-family: 'indie flower', sans-serif;
+    transition: all 0.3s ease;
+}
+nav.sticky{
+    padding: 13px 0;
+    background: teal;
+}
+nav .navbar{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+nav .navbar .logo a{
+    font-size: 35px;
+    font-weight: 500;
+    color: teal;
+    text-decoration: none;
+}
+nav.sticky .navbar .logo a{
+    color: #fff;
+    text-decoration: none;
+}
+ 
+nav .navbar .menu{
+    display:flex;
+    position: relative;
+  
+ 
+}
+nav .navbar .menu li{
+    margin: 0 8px;
+    list-style: none;   
+}
+.navbar .menu  a{
+    font-size: 18px;
+    font-weight: 500;
+    color: #0e3421;
+    padding: 6px 0;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+.navbar .menu a:hover{
+    color: teal
+}
+nav.sticky .menu a{
+    color: #fff;
+}
+nav.sticky .menu a:hover{
+    color: #0e2431;
+}
+
+.navbar .media-icons a{
+    font-size: 18px;
+    margin: 0 10px;
+    color: teal;
+}
+nav.sticky .navbar .media-icons a{
+    color: #fff;
+}
+.media-icons i{
+    font-size: 35px;
+}
+/* Side navigaion menu button CSS*/
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 30px;
+    top: 20px;
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+nav .menu-btn{
+    color: teal;
+}
+nav.sticky .menu-btn{ 
+    color: #fff;
+}
+.navbar .menu .menu-btn{
+    color: #fff;
+  }
+/* Home section Css*/
+.home{
+    height: 100vh;
+    width: 100%;
+    background: url(../img/boat.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'indie flower', sans-serif;
+}
+.home .home-content{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.home .text .text-one{
+    font-size: 25px;
+    color: #0e2431;
+}
+.home .text-two{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    color: #0e2431;
+}
+.home  .text-three{
+    font-size: 40px;
+    color: teal;
+}
+.home  .text-four{
+    font-size: 2px;
+    margin: 5px 0;
+    color: #0e2431;
+}
+.home .button{
+    margin: 14px 0;
+}
+.home .button button{
+    outline: none;
+    color: #fff;
+    background: teal;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.4 ease;
+    cursor: pointer;
+}
+.home .button button:hover{
+    color:teal;
+    background-color: #fff;
+    border-color: teal;
+}
+
+/* About me Css section */
+/* Elements where we need to apply the same css will be selected as section or class directly*/
+section{
+   padding-top: 40px;
+}
+section .content{
+    margin: 40px auto;
+    width: 80%;
+    font-family: 'indie flower', sans-serif;
+}
+.about .about-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+section .title span {
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    color: #0e2431;
+}
+section .title span::before,
+section .title span::after { 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: teal;
+}
+section .title span::after{
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -7px;
+}
+
+
+.about .about-details .left{
+    width: 45%;
+}
+.about .left img{
+    height: 400px;
+    width:400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.about-details .right{
+    width: 55%;
+}
+
+section .topic{
+    font-size: 25px;
+    font-weight: 500;
+    color: #0e2431;
+    margin-bottom: 10px;
+
+}
+
+.about-details .right p{
+    color: #0e2431;
+    text-align: justify;
+}
+section .button{
+    margin: 16px 0;
+}
+section .button button{
+    outline: none;
+    color: #fff;
+    background: teal;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+section .button button:hover{
+    color:teal;
+    background-color: #fff;
+    border-color: teal;
+}
+/* My courses css */
+.skills{
+    background: #f0f8ff;
+}
+.skills .content{
+    padding: 40px 0;
+}
+.skills .skills-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills-details .text{
+    width: 50%;
+}
+.skills-details p{
+    font-weight: bold;
+    text-align: justify;
+}
+.skills-details .experience{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+
+}
+.skills-details .experience .num{
+    color:#0e2431;
+    font-size: 80px;
+}
+.skills-details .experience .exp{
+    color: #0E2431;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+.skills-details .boxes{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .skills-details .box{
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+  }
+  .skills-details .box i{
+      font-size: 50px;
+  }
+  .skills-details .box p{
+      font-size: 20px;
+  }
+  .skills-details .boxes .topic{
+    font-size: 20px;
+    color: teal;
+  }
+  /* Contact Me CSS */
+.contact{
+    background: #F0F8FF;
+  }
+  .contact .content{
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  .contact .text{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+/* footer Css */
+footer{
+    background: teal;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'indie flower', sans-serif;
+  }
+  footer .text{
+      color:#f0f8ff;
+      font-size: large;
+  }
+/*responsive media query css*/
+@media (max-width: 1190px){
+    section .content{
+        width: 85%;
+    }
+
+}
+@media (max-width: 1000px){
+    .about .about-details{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .about-details .left{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-details .right{
+        width: 90%;
+        margin: 40px 0;
+      }
+}
+
+@media (max-width: 900px){
+    nav .navbar{
+        width: 90%;
+    }
+}
+
+@media (max-width: 750px){
+    nav .navbar{
+        width: 90%;
+    }
+  nav .navbar .menu {
+      position: fixed;
+      left: -100%;
+      top: 0;
+      height: 100vh;
+      max-width: 400px;
+      width: 100%;
+      background: #0e2431;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+      transition: all 0.5s ease;
+  }
+ .navbar.active .menu {
+    left: 0;
+    }
+  .navbar .menu a{
+      display: block;
+      margin: 10px 0;
+      font-size: 23px;
+      color: #fff;
+  } 
+  nav.sticky .menu a:hover{
+      color: teal;
+  }
+  .navbar .media-icons{
+      display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+      display: block;
+  }
+  .home .text-two{
+    font-size: 65px;
+  
+    }
+  .home .text-three{
+    font-size: 35px;
+    } 
+}
+@media (max-width: 500px){
+    .home .text-two{
+        font-size: 55px;
+      
+    }
+    .home .text-three{
+        font-size: 33px;
+    } 
+}
